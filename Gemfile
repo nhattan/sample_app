@@ -3,6 +3,7 @@ ruby '2.0.0'
 #ruby-gemset=railstutorial_rails_4_0
 
 gem 'rails', '4.0.2'
+gem 'pg', '0.15.1'
 gem 'bootstrap-sass', '2.3.2.0'
 gem 'bcrypt-ruby', '3.1.2'
 gem 'faker', '1.1.2'
@@ -13,7 +14,7 @@ group :development, :test do
   gem 'sqlite3', '1.3.8'
   gem 'rspec-rails', '2.13.1'
   # The following optional lines are part of the advanced setup.
-  # gem 'guard-rspec', '2.5.0'
+  gem 'guard-rspec', '2.5.0'
   # gem 'spork-rails', '4.0.0'
   # gem 'guard-spork', '1.5.0'
   # gem 'childprocess', '0.3.6'
@@ -25,7 +26,7 @@ group :test do
   gem 'factory_girl_rails', '4.2.0'
   gem 'cucumber-rails', '1.4.0', :require => false
   gem 'database_cleaner', github: 'bmabey/database_cleaner'
-
+  gem 'spork-rails', '4.0.0'
   # Uncomment this line on OS X.
   # gem 'growl', '1.0.3'
 
@@ -50,6 +51,6 @@ group :doc do
 end
 
 group :production do
-  gem 'pg', '0.15.1'
+  #gem 'pg', '0.15.1'
   gem 'rails_12factor', '0.0.2'
 end
