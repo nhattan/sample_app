@@ -33,7 +33,7 @@ describe User do
 		it { should_not be_valid }
 	end
 
-	describe "when the email format is valid" do
+	describe "when the email format is invalid" do
 		it "should be valid" do
 			addresses = %w[user@foo,com user_at_foo.org example@foo_foo.com 
 							foo@foo+bar.com]

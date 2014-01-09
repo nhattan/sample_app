@@ -2,6 +2,12 @@
 /* mixins, variables, etc. */
 $grayMediumLight: #eaeaea;
 
+@mixin box_sizing {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
 /* Universal */
 html {
 	overflow-y: scroll;
@@ -94,4 +100,68 @@ footer {
 			margin-left: 10px;
 		}
 	}
+}
+
+/* miscellaneous */
+
+.debug_dump {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* sidebar */
+
+aside {
+	section {
+		padding: 10px 0;
+		border-top: 1px solid $grayLighter;
+		&:first-child {
+			border: 0;
+			padding-top: 0;
+		}
+		span {
+			display: block;
+			margin-bottom: 3px;
+			line-height: 1;
+		}
+		h1 {
+			font-size: 1.4em;
+			text-align: left;
+			letter-spacing: -1px;
+			margin-bottom: 2px;
+			margin-top: 0px;
+		}
+	}
+}
+
+.gravatar {
+	float: left;
+	margin-right: 10px;
+}
+
+/* form */
+input, textarea, select, .uneditable-input {
+	border: 1px solid #bbb;
+	width: 100%;
+	margin-bottom: 15px;
+	@include box_sizing;
+}
+
+input {
+	height: auto !important;
+}
+
+/* error messages */
+#error_explanation {
+	color: #f00;
+	ul {
+		list-style: none;
+		margin: 0 0 18px 0;
+	}
+}
+
+.field_with_errors {
+  @extend .control-group;
+  @extend .error;
 }
