@@ -12,7 +12,8 @@
     <div class="container">
       <!-- arranges to insert a div tag for each element in the flash -->
       <% flash.each do |key, value| %>
-        <div class="alert alert-<%= key %>"><%= value %></div>
+        <%= content_tag(:div, value, class: "alert alert-#{key}") %>
+        <!-- <div class="alert alert-<%= key %>"><%= value %></div> -->
       <% end %>
       <%= yield %>
       <%= render 'layouts/footer' %>
