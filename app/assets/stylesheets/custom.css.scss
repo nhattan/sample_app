@@ -8,98 +8,101 @@ $grayMediumLight: #eaeaea;
   box-sizing: border-box;
 }
 
-/* Universal */
+/* universal */
+
 html {
-	overflow-y: scroll;
+  overflow-y: scroll;
 }
 
 body {
-	padding-top: 60px;
+  padding-top: 60px;
 }
 
 section {
-	overflow: auto;
+  overflow: auto;
 }
 
 textarea {
-	resize: vertical;
+  resize: vertical;
 }
 
 .center {
-	text_align: center;
-	h1 {
-		margin-bottom: 10px;	
-	}
+  text-align: center;
+  h1 {
+    margin-bottom: 10px;
+  }
 }
 
-/* Typography */
+/* typography */
 
 h1, h2, h3, h4, h5, h6 {
-	line-height: 1;
+  line-height: 1;
 }
 
 h1 {
-	font-size: 3em;
-	letter-spacing: -2px;
-	margin-bottom: 30px;
-	text-align: center;
+  font-size: 3em;
+  letter-spacing: -2px;
+  margin-bottom: 30px;
+  text-align: center;
 }
 
 h2 {
-	font-size: 1.2em;
-	letter-spacing: -1px;
-	margin-bottom: 30px;
-	text-align: center;
-	font-weight: normal;
-	color: $grayLight;
+  font-size: 1.2em;
+  letter-spacing: -1px;
+  margin-bottom: 30px;
+  text-align: center;
+  font-weight: normal;
+  color: $grayLight;
 }
 
 p {
-	font-size: 1.1em;
-	line-height: 1.7em;
+  font-size: 1.1em;
+  line-height: 1.7em;
 }
 
+
 /* header */
+
 #logo {
-	float: left;
-	margin-right: 10px;
-	font-size: 1.7 em;
-	color: $white;
-	text-transform: uppercase;
-	letter-spacing: -1px;
-	padding-top: 9px;
-	font-weight: bold;
-	line-height: 1;
-	&:hover {
-		color: $white;
-		text-decoration: none;	
-	}
+  float: left;
+  margin-right: 10px;
+  font-size: 1.7em;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  padding-top: 9px;
+  font-weight: bold;
+  line-height: 1;
+  &:hover {
+    color: white;
+    text-decoration: none;
+  }
 }
 
 /* footer */
 
 footer {
-	margin-top: 45px;
-	margin-bottom: 5px;
-	border-top: 1px solid #eaeaea;
-	color: $grayLight;
-	a {
-		color: $gray;	
-		&:hover {
-			color: $grayDarker;
-		}
-	}
-	small {
-		float: left;
-	}
-	ul {
-		float: right;
-		list-style: none;
-		li {
-			float: left;
-			margin-left: 10px;
-		}
-	}
+  margin-top: 45px;
+  padding-top: 5px;
+  border-top: 1px solid $grayMediumLight;
+  color: $grayLight;
+  a {
+    color: $gray;
+    &:hover {
+      color: $grayDarker;
+    }
+  }
+  small {
+    float: left;
+  }
+  ul {
+    float: right;
+    list-style: none;
+    li {
+      float: left;
+      margin-left: 10px;
+    }
+  }
 }
 
 /* miscellaneous */
@@ -135,25 +138,47 @@ aside {
 	}
 }
 
-/* form */
+.stats {
+  overflow: auto;
+  a {
+    float: left;
+    padding: 0 10px;
+    border-left: 1px solid $grayLighter;
+    color: gray;
+    &:first-child {
+      padding-left: 0;
+      border: 0;
+    }
+    &:hover {
+      text-decoration: none;
+      color: $blue;
+    }
+  }
+  strong {
+    display: block;
+  }
+}
+
+/* forms */
+
 input, textarea, select, .uneditable-input {
-	border: 1px solid #bbb;
-	width: 100%;
-	margin-bottom: 15px;
-	@include box_sizing;
+  border: 1px solid #bbb;
+  width: 100%;
+  margin-bottom: 15px;
+  @include box_sizing;
 }
 
 input {
-	height: auto !important;
+  height: auto !important;
 }
 
 /* error messages */
 #error_explanation {
-	color: #f00;
-	ul {
-		list-style: none;
-		margin: 0 0 18px 0;
-	}
+  color: #f00;
+  ul {
+    list-style: none;
+    margin: 0 0 18px 0;
+  }
 }
 
 .field_with_errors {
@@ -164,16 +189,16 @@ input {
 /* Users index */
 
 .users {
-	list-style: none;
-	margin: 0;
-	li {
-		overflow: auto;
-		padding: 10px 0;
-		border-top: 1px solid $grayLighter;
-		&.last-child {
-			border-bottom: 1px solid $grayLighter;
-		}
-	}
+  list-style: none;
+  margin: 0;
+  li {
+    overflow: auto;
+    padding: 10px 0;
+    border-top: 1px solid $grayLighter;
+    &:last-child {
+      border-bottom: 1px solid $grayLighter;
+    }
+  }
 }
 
 /* microposts */
@@ -201,30 +226,6 @@ aside {
   textarea {
     height: 100px;
     margin-bottom: 5px;
-  }
-}
-
-
-/* sidebar */
-
-.stats {
-  overflow: auto;
-  a {
-    float: left;
-    padding: 0 10px;
-    border-left: 1px solid $grayLighter;
-    color: gray;
-    &:first-child {
-      padding-left: 0;
-      border: 0;
-    }
-    &:hover {
-      text-decoration: none;
-      color: $blue;
-    }
-  }
-  strong {
-    display: block;
   }
 }
 
